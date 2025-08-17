@@ -38,7 +38,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ThemeProvider>
-          <div className="min-h-screen transition-all duration-300 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 text-gray-900 dark:text-gray-100">
+          <div className="min-h-screen transition-all duration-300 bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 text-gray-900 dark:text-gray-100">
             <Header />
             <main className="relative z-10">{children}</main>
           </div>
