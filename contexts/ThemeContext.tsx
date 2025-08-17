@@ -1,6 +1,7 @@
+// contexts/ThemeContext.tsx
 "use client";
 
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 type Theme = "light" | "dark";
 
@@ -13,44 +14,31 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
 
+  // Load theme from localStorage or system preference
   useEffect(() => {
-    // Check for system preference on mount
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initialTheme = prefersDark ? "dark" : "light";
-    setTheme(initialTheme);
-    setMounted(true);
+    const saved = localStorage.getItem("theme") as Theme | null;
+    if (saved) {
+      setTheme(saved);
+      document.documentElement.classList.add(saved);
+    } else {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const defaultTheme: Theme = prefersDark ? "dark" : "light";
+      setTheme(defaultTheme);
+      document.documentElement.classList.add(defaultTheme);
+    }
   }, []);
 
+  // Save theme and update DOM class
   useEffect(() => {
-    if (!mounted) return;
-    
-    // Apply theme to <html>
-    const html = document.documentElement;
-    html.classList.remove("light", "dark");
-    html.classList.add(theme);
-    
-    // Update CSS custom properties for smooth transitions
-    if (theme === "dark") {
-      html.style.setProperty("--background", "222.2 84% 4.9%");
-      html.style.setProperty("--foreground", "210 40% 98%");
-      html.style.setProperty("--border", "217.2 32.6% 17.5%");
-    } else {
-      html.style.setProperty("--background", "0 0% 100%");
-      html.style.setProperty("--foreground", "222.2 84% 4.9%");
-      html.style.setProperty("--border", "214.3 31.8% 91.4%");
-    }
-  }, [theme, mounted]);
+    document.documentElement.classList.remove(theme === "light" ? "dark" : "light");
+    document.documentElement.classList.add(theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    setTheme(theme === "light" ? "dark" : "light");
   };
-
-  // Prevent hydration mismatch by not rendering until mounted
-  if (!mounted) {
-    return <div style={{ visibility: 'hidden' }}>{children}</div>;
-  }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -61,6 +49,12 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
 export function useTheme() {
   const context = useContext(ThemeContext);
-  if (!context) throw new Error("useTheme must be used inside ThemeProvider");
+  if (!context) {
+    console.warn("⚠️ useTheme was used outside of ThemeProvider. Returning default light theme.");
+    return {
+      theme: "light" as Theme,
+      toggleTheme: () => {},
+    };
+  }
   return context;
 }
