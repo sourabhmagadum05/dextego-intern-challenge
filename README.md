@@ -27,7 +27,7 @@ Web dashboard displaying call statistics including total calls, call duration, a
 ### 3.Detailed call views
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboard.png?raw=true)
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboardcall.png?raw=true)
-### 1. API Route (POST handler in app/api/calls/route.ts)
+### API Route (POST handler in app/api/calls/route.ts)
 Before:
 ```export async function POST(request: NextRequest): Promise<NextResponse<ApiResponse<Call[]>>> {
   try {
@@ -62,3 +62,24 @@ After:
   }
 }
 ```
+Change Summary:
+
+**Removed the unused request: NextRequest parameter.
+
+**Simplified the function signature since the request object was not required.
+### CallCard Component (components/CallCard.tsx)
+Before:
+```<p className="text-sm text-gray-500 dark:text-gray-400">
+  {formatDate(callDate)}
+</p>
+```
+After:
+```<p className="text-sm text-gray-500 dark:text-gray-400">
+  {formatDate(call.date)}
+</p>
+```
+Change Summary:
+
+**Fixed a bug where callDate was undefined.
+
+**Correctly used call.date from the Call object.

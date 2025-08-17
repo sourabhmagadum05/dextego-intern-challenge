@@ -65,6 +65,71 @@
       "sentimentScore": 0,
       "notes": "Upcoming call scheduled for today.",
       "tags": ["scheduled", "demo"]
+    },
+    {
+      "id": "call_006",
+      "prospectName": "Linda Garcia",
+      "date": "2024-08-12T13:00:00Z",
+      "duration": 2400,
+      "status": "completed",
+      "outcome": "qualified",
+      "talkTimeRatio": 0.68,
+      "questionsAsked": 14,
+      "sentimentScore": 0.85,
+      "notes": "Decision maker. Wants a proposal by EOD Friday.",
+      "tags": ["enterprise", "decision-maker", "proposal-requested"]
+    },
+    {
+      "id": "call_007",
+      "prospectName": "Robert Miller",
+      "date": "2024-08-11T15:30:00Z",
+      "duration": 600,
+      "status": "completed",
+      "outcome": "not-interested",
+      "talkTimeRatio": 0.3,
+      "questionsAsked": 3,
+      "sentimentScore": 0.2,
+      "notes": "Company just signed with a competitor last month.",
+      "tags": ["mid-market", "competitor"]
+    },
+    {
+      "id": "call_008",
+      "prospectName": "Jessica Martinez",
+      "date": "2024-08-18T10:00:00Z",
+      "duration": 0,
+      "status": "scheduled",
+      "outcome": "pending",
+      "talkTimeRatio": 0,
+      "questionsAsked": 0,
+      "sentimentScore": 0,
+      "notes": "First discovery call scheduled for tomorrow.",
+      "tags": ["scheduled", "discovery"]
+    },
+    {
+      "id": "call_009",
+      "prospectName": "Chris Brown",
+      "date": "2024-08-10T11:45:00Z",
+      "duration": 1500,
+      "status": "completed",
+      "outcome": "follow-up",
+      "talkTimeRatio": 0.6,
+      "questionsAsked": 9,
+      "sentimentScore": 0.7,
+      "notes": "Good conversation, but needs to secure funding. Check back in Q4.",
+      "tags": ["startup", "funding", "q4-follow-up"]
+    },
+    {
+      "id": "call_010",
+      "prospectName": "Amanda Taylor",
+      "date": "2024-08-09T14:00:00Z",
+      "duration": 0,
+      "status": "no-show",
+      "outcome": "reschedule",
+      "talkTimeRatio": 0,
+      "questionsAsked": 0,
+      "sentimentScore": 0,
+      "notes": "Prospect did not join the call. Sent an email to reschedule.",
+      "tags": ["no-show", "reschedule"]
     }
   ]
 }
