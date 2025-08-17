@@ -24,3 +24,4 @@ Web dashboard displaying call statistics including total calls, call duration, a
 ### 2.“Ensured all pages load without errors. Verified the Dashboard and Calls pages, both reloading and working properly.” ✅
 
 
+### 3.Detailed call views
