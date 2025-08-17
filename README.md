@@ -10,9 +10,8 @@
 
 ### 2. React Code (Dashboard Component)  
 **Bug:**  
-![Dashboard Screenshot](screenshots/dashboard.png)
-```jsx
-<p className="text-2xl font-bold text-gray-900 dark:text-white">{totalCalls}</p>
-Changed it to use
-<p className="text-2xl font-bold text-gray-900 dark:text-white">{stats.totalCalls}</p>
+The issue was that `totalCalls` was undefined.  
 
+**Fix:**  
+```jsx
+<p className="text-2xl font-bold text-gray-900 dark:text-white">{stats.totalCalls}</p>
