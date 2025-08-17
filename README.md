@@ -9,6 +9,10 @@
 - Ensured all values are valid (e.g., `"duration": 900` as a number, not a string).  
 
 ### 2. React Code (Dashboard Component)  
+### 3. Screenshot 📸  
+
+![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboard.png?raw=true)
+
 **Bug:**  
 The issue was that `totalCalls` was undefined.  
 
