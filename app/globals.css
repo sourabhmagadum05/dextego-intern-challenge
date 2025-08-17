@@ -1,60 +1,43 @@
 @import "tailwindcss";
 
+/* CSS Custom Properties for theming - Only what's needed */
 :root {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
   --border: 214.3 31.8% 91.4%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-
-
-:root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --border: 214.3 31.8% 91.4%;
-}
-
+/* Dark theme variables */
 .dark {
   --background: 222.2 84% 4.9%;
   --foreground: 210 40% 98%;
   --border: 217.2 32.6% 17.5%;
 }
 
+/* ONLY modify body background and color - keep everything else intact */
 body {
-  color: rgb(var(--foreground));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background))
-    )
-    rgb(var(--background));
-    box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  background: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
+/* Light mode - Pure white background */
+:root:not(.dark) body {
+  background: white !important;
+  color: #1f2937 !important;
+}
+
+/* Dark mode - Dark background */
+.dark body {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  color-scheme: dark;
+}
+
+/* Utility classes - keep existing ones */
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -62,3 +45,13 @@ body {
   overflow: hidden;
 }
 
+/* Minimal transitions - only for theme switching */
+html {
+  transition: background-color 0.3s ease;
+}
+
+/* Override any interfering backgrounds in light mode */
+:root:not(.dark) .bg-gradient-to-br[class*="from-gray"],
+:root:not(.dark) .bg-gradient-to-br[class*="from-blue"] {
+  background: white !important;
+}
