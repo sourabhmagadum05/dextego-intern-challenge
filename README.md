@@ -1,8 +1,8 @@
-# Dextego Intern Challenge
+# Dextego Sales Dashboard - Intern Assignment
 
 ## Expected Features
 
-### 1.Fixed all critical bugs that were preventing the application from running. 
+## 1.Fixed all critical bugs that were preventing the application from running. 
 - Fixed invalid JSON format.  
 - Added missing commas.  
 - Removed trailing commas.  
@@ -20,9 +20,9 @@ Web dashboard displaying call statistics including total calls, call duration, a
 
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboard.png?raw=true)
 
-### 2.“Ensured all pages load without errors. Verified the Dashboard and Calls pages, both reloading and working properly.” 
+## 2.“Ensured all pages load without errors. Verified the Dashboard and Calls pages, both reloading and working properly.” 
 
-### 3.Detailed call views
+## 3.Detailed call views
 
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboardcall.png?raw=true)
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboardcall.png?raw=true)
@@ -87,7 +87,7 @@ After:
 - Fixed a bug where callDate was undefined.
 - Correctly used call.date from the Call object.
 
-### 4.Dataset Update: Added 25 More Calls
+## 4.Dataset Update: Added 25 More Calls
 
 - Added 25 additional call records to data/calls.json.
 - To provide richer test data that covers multiple real-world scenarios (completed, no-show, cancelled, follow-up, interested, not-interested) for UI states, analytics, and QA.
