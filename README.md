@@ -28,7 +28,7 @@ Web dashboard displaying call statistics including total calls, call duration, a
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboardcall.png?raw=true)
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboardcall.png?raw=true)
 **API Route (POST handler in app/api/calls/route.ts)**
-Before:
+- Before:
 ```export async function POST(request: NextRequest): Promise<NextResponse<ApiResponse<Call[]>>> {
   try {
     const calls = callsData.calls as Call[]
@@ -45,7 +45,7 @@ Before:
   }
 }
 ```
-After:
+- After:
 ```export async function POST(): Promise<NextResponse<ApiResponse<Call[]>>> {
   try {
     const calls = callsData.calls as Call[]
