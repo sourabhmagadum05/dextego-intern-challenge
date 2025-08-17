@@ -14,7 +14,6 @@ The issue was that `totalCalls` was undefined.
 **Fix:**  
 ```<p className="text-2xl font-bold text-gray-900 dark:text-white">{stats.totalCalls}</p> ```
 
-
 ### Screenshot 📸  
 
 Web dashboard displaying call statistics including total calls, call duration, and user activity. The interface uses a clean, modern design with a white and gray color scheme. Text on the dashboard includes Total Calls, Call Duration, and Active Users, each accompanied by numerical values. The overall tone is professional and organized, supporting efficient data review in a business environment.
@@ -23,8 +22,8 @@ Web dashboard displaying call statistics including total calls, call duration, a
 
 ### 2.“Ensured all pages load without errors. Verified the Dashboard and Calls pages, both reloading and working properly.” ✅
 
-
 ### 3.Detailed call views
+
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboardcall.png?raw=true)
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboardcall.png?raw=true)
 **API Route (POST handler in app/api/calls/route.ts)**
@@ -84,6 +83,7 @@ After:
 - Correctly used call.date from the Call object.
 
 ### 3.Dataset Update: Added 25 More Calls
+
 - Added 25 additional call records to data/calls.json.
 - To provide richer test data that covers multiple real-world scenarios (completed, no-show, cancelled, follow-up, interested, not-interested) for UI states, analytics, and QA.
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/addedcalls.png?raw=true)
