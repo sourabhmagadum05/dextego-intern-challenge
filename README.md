@@ -21,4 +21,6 @@ Web dashboard displaying call statistics including total calls, call duration, a
 
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboard.png?raw=true)
 
+### 2.“Ensured all pages load without errors. Verified the Dashboard and Calls pages, both reloading and working properly.” ✅
+
 
