@@ -85,4 +85,5 @@ After:
 
 ### 3.Dataset Update: Added 25 More Calls
 - Added 25 additional call records to data/calls.json.
-- To provide richer test data that covers multiple real-world scenarios (completed, no-show, cancelled, - - follow-up, interested, not-interested) for UI states, analytics, and QA.
+- To provide richer test data that covers multiple real-world scenarios (completed, no-show, cancelled, follow-up, interested, not-interested) for UI states, analytics, and QA.
+![Dashboard Screenshot]
