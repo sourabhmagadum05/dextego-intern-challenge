@@ -296,3 +296,6 @@ After:
 - Duration Distribution Bar Chart: Call length analysis across different time ranges
 - Daily Call Trends Area Chart: Stacked area chart showing qualified vs non-qualified calls over time
 - Sentiment Trend Line Chart: Track customer sentiment scores across recent calls
+![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/charts.png?raw=true)
+
+## thank you
