@@ -93,7 +93,7 @@ After:
 - To provide richer test data that covers multiple real-world scenarios (completed, no-show, cancelled, follow-up, interested, not-interested) for UI states, analytics, and QA.
 ![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/addedcalls.png?raw=true)
 
-### 4.Responsive design Error handling Loading states and animations
+## 5.Responsive design Error handling Loading states and animations
 
 ## Header Component Enhancement
 
