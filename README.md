@@ -16,4 +16,4 @@ Changed it to use
 <p className="text-2xl font-bold text-gray-900 dark:text-white">{stats.totalCalls}</p>
 
 
-![Dashboard Screenshot](screenshots/dashboard.png)
+Dashboard interface for Dextego Sales Dashboard showing sales call performance metrics. The main section displays four statistics: Total Calls 0, Avg Duration 0m, Qualified Rate 0 percent, and Avg Sentiment 0 percent. Below, a red error message reads Failed to fetch calls under the Recent Calls heading. The environment uses a dark theme with white and colored text, and the overall tone is neutral and professional.
