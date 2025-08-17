@@ -67,7 +67,7 @@ After:
 - Removed the unused request: NextRequest parameter.
 
 - Simplified the function signature since the request object was not required.
-### CallCard Component (components/CallCard.tsx)
+**CallCard Component (components/CallCard.tsx)**
 - Before:
 ```<p className="text-sm text-gray-500 dark:text-gray-400">
   {formatDate(callDate)}
@@ -86,4 +86,4 @@ After:
 ### 3.Dataset Update: Added 25 More Calls
 - Added 25 additional call records to data/calls.json.
 - To provide richer test data that covers multiple real-world scenarios (completed, no-show, cancelled, follow-up, interested, not-interested) for UI states, analytics, and QA.
-![Dashboard Screenshot]
+![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/addedcalls.png?raw=true)
