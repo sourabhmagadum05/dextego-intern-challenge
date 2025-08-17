@@ -276,3 +276,12 @@ After:
 - Mobile-optimized touch targets
 - Hover lift animations for all cards
 - Enhanced loading states with smooth transitions
+
+## 6.🌗 Theme Support
+
+### This project comes with Light Mode and Dark Mode support.
+- Easily switch between themes for a better user experience.
+- Dark mode for comfortable viewing at night.
+![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/darkmood.png?raw=true)
+- Light mode for clarity during the day.
+![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/lightmood.png?raw=true)
