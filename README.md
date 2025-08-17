@@ -25,3 +25,5 @@ Web dashboard displaying call statistics including total calls, call duration, a
 
 
 ### 3.Detailed call views
+![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboard.png?raw=true)
+![Dashboard Screenshot](https://github.com/sourabhmagadum05/dextego-intern-challenge/blob/main/screenshots/dashboardcall.png?raw=true)
