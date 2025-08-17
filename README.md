@@ -45,3 +45,4 @@ This project has several issues that need to be fixed. Your task is to:
 - TypeScript
 - TailwindCSS
 - Lucide React (for icons)
+# dextego-intern-challenge
